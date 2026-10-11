@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Día de la Mujer Boliviana · 11 de octubre</title>
+<meta name="description" content="Una dedicatoria con cariño para la mujer boliviana. Toca cada cartita para leer un pensamiento especial.">
+<meta name="theme-color" content="#EFE4FB">
+<meta property="og:type" content="website">
+<meta property="og:title" content="¡Feliz Día de la Mujer Boliviana! 💜">
+<meta property="og:description" content="Toca cada cartita para leer un pensamiento especial.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --lila-50:#F8F3FD;
+    --lila-100:#EFE4FB;
+    --lila-200:#DCCBF3;
+    --lila-300:#C3A6EA;
+    --morado:#7B49BE;
+    --morado-claro:#9468D4;
+    --morado-osc:#4B2A80;
+    --tinta:#3B2160;
+    --vena:#7F50C4;
+    --w-ramo:clamp(80px,21vw,200px);
+  }
+  *{box-sizing:border-box}
+  html{
+    background:linear-gradient(180deg,#F1E7FB 0%,#FFFFFF 40%,#EDE0FA 100%) fixed;
+    -webkit-text-size-adjust:100%;
+  }
+  body{
+    margin:0;
+    min-height:100vh;
+    font-family:'Quicksand',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+    color:var(--tinta);
+    background:
+      radial-gradient(circle at 12% 8%,rgba(195,166,234,.35),transparent 38%),
+      radial-gradient(circle at 92% 30%,rgba(220,203,243,.55),transparent 40%),
+      radial-gradient(circle at 20% 78%,rgba(220,203,243,.5),transparent 42%);
+    overflow-x:hidden;
+  }
+
+  /* ---------- Ramos de flores ---------- */
+  .ramo{
+    position:fixed;
+    bottom:0;
+    width:var(--w-ramo);
+    height:auto;
+    z-index:0;
+    pointer-events:none;
+    filter:drop-shadow(0 6px 10px rgba(75,42,128,.18));
+  }
+  .ramo-izq{left:max(-14px,calc(50vw - 470px))}
+  .ramo-der{right:max(-14px,calc(50vw - 470px));transform:scaleX(-1)}
+
+  /* ---------- Contenido ---------- */
+  .pagina{
+    position:relative;
+    z-index:1;
+    max-width:560px;
+    margin:0 auto;
+    padding:34px calc(var(--w-ramo) - 14px) 64px;
+  }
+  @media (min-width:900px){
+    .pagina{padding-inline:20px}
+  }
+
+  .encabezado{text-align:center;position:relative;padding:6px 0 4px}
+  .encabezado h1{
+    margin:0;
+    font-family:'Dancing Script','Brush Script MT',cursive;
+    font-weight:700;
+    font-size:clamp(2.1rem,9.4vw,3.3rem);
+    line-height:1.05;
+    color:var(--morado-osc);
+    text-shadow:0 2px 0 #fff,0 6px 16px rgba(123,73,190,.25);
+  }
+  .fecha{
+    display:inline-block;
+    margin-top:12px;
+    padding:5px 16px;
+    border-radius:999px;
+    background:#fff;
+    border:1.5px solid var(--lila-200);
+    font-weight:700;
+    font-size:.95rem;
+    color:var(--morado);
+  }
+  .chispa{position:absolute;width:16px;height:16px;color:var(--morado-claro);opacity:.8}
+  .chispa.a{top:2px;left:2%}
+  .chispa.b{top:26px;right:0;width:12px;height:12px;color:var(--lila-300)}
+  .chispa.c{bottom:-6px;left:-2%;width:11px;height:11px;color:var(--lila-300)}
+  .chispa.d{top:-6px;right:8%;width:11px;height:11px}
+
+  .indicacion{
+    margin:26px 4px 20px;
+    text-align:center;
+    font-size:1.04rem;
+    font-weight:600;
+    line-height:1.5;
+    color:#6B4C9B;
+  }
+
+  /* ---------- Cartitas ---------- */
+  .lista{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+
+  .boton{
+    appearance:none;
+    -webkit-appearance:none;
+    width:100%;
+    min-height:58px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+    padding:14px 20px;
+    border:0;
+    border-radius:999px;
+    font:700 1.12rem/1.2 'Quicksand',system-ui,sans-serif;
+    color:#fff;
+    background:linear-gradient(180deg,#8D5BD0 0%,#7340B6 100%);
+    box-shadow:0 8px 16px -8px rgba(75,42,128,.65),inset 0 1px 0 rgba(255,255,255,.28);
+    cursor:pointer;
+    -webkit-tap-highlight-color:transparent;
+    transition:transform .2s ease,box-shadow .25s ease,background .25s ease;
+  }
+  .boton:active{transform:scale(.98)}
+  .boton:focus-visible{outline:3px solid #fff;outline-offset:2px;box-shadow:0 0 0 6px var(--morado)}
+  .boton svg{width:24px;height:24px;flex:none;transition:transform .45s ease}
+  .abierta .boton{
+    background:linear-gradient(180deg,#6B3AAE 0%,#5A2E98 100%);
+    box-shadow:0 4px 10px -6px rgba(75,42,128,.7),inset 0 2px 4px rgba(0,0,0,.18);
+  }
+  .abierta .boton svg{transform:rotate(-12deg) scale(1.12)}
+
+  .panel{
+    display:grid;
+    grid-template-rows:0fr;
+    opacity:0;
+    margin-top:0;
+    visibility:hidden;
+    transition:grid-template-rows .5s cubic-bezier(.3,.7,.2,1),opacity .4s ease,margin-top .5s ease,visibility 0s linear .5s;
+  }
+  .abierta .panel{
+    grid-template-rows:1fr;
+    opacity:1;
+    margin-top:10px;
+    visibility:visible;
+    transition-delay:0s;
+  }
+  .panel-int{min-height:0;overflow:hidden}
+  .panel p{
+    margin:0;
+    padding:20px 22px;
+    background:#fff;
+    border:1.5px solid var(--lila-200);
+    border-radius:22px;
+    text-align:center;
+    font-size:1.07rem;
+    font-weight:500;
+    line-height:1.7;
+    color:var(--tinta);
+    box-shadow:0 10px 22px -14px rgba(75,42,128,.5);
+  }
+
+  /* ---------- Mensaje final ---------- */
+  .final{
+    margin-top:34px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    padding:26px 14px;
+    border:3px dotted var(--morado-claro);
+    border-radius:26px;
+    background:rgba(255,255,255,.78);
+    text-align:center;
+  }
+  .final p{
+    margin:0;
+    font-size:1.1rem;
+    font-weight:700;
+    line-height:1.55;
+    color:var(--morado-osc);
+  }
+  .final svg{flex:none;width:18px;height:18px;color:var(--morado-claro)}
+  .final svg.peq{width:12px;height:12px;color:var(--lila-300)}
+
+  @media (prefers-reduced-motion:reduce){
+    *{transition-duration:.01ms !important;transition-delay:0s !important}
+  }
+</style>
+</head>
+<body>
+
+<!-- Símbolos reutilizables -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <!-- iconos de los botones -->
+    <symbol id="i-corazon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 2.7 4.5 6.4 4.5c2.1 0 3.8 1.2 5.6 3.3 1.8-2.1 3.5-3.3 5.6-3.3 3.700 0 5.500 3.900 4 7.300C19.500 16.400 12 21 12 21z"/></symbol>
+    <symbol id="i-cuadrado" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="4.500" fill="currentColor"/></symbol>
+    <symbol id="i-estrella" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.500l2.900 6.100 6.600.8-4.900 4.600 1.300 6.600L12 17.300 6.100 20.600l1.300-6.600L2.500 9.400l6.600-.8z"/></symbol>
+    <symbol id="i-hoja" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M20 4C10 4 4.500 8.500 4.500 14.500c0 3 2 5.500 5 5.500 6 0 10.500-6 10.500-16z"/>
+      <path d="M7 19.200C9 14.500 11.500 11.500 15 9" fill="none" stroke-width="1.700" stroke-linecap="round" style="stroke:var(--vena)"/>
+    </symbol>
+    <symbol id="i-sobre" viewBox="0 0 24 24">
+      <rect x="3" y="5" width="18" height="14" rx="3" fill="currentColor"/>
+      <path d="M4.500 7.500L12 13l7.500-5.500" fill="none" stroke-width="1.800" stroke-linecap="round" stroke-linejoin="round" style="stroke:var(--vena)"/>
+    </symbol>
+    <symbol id="i-chispa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 1.500c.9 5.600 4.900 9.600 10.500 10.500-5.600.9-9.600 4.900-10.500 10.500C11.100 16.900 7.100 12.900 1.500 12 7.100 11.100 11.100 7.100 12 1.500z"/></symbol>
+
+    <!-- flor morada: color definido con "color" en cada uso -->
+    <g id="flor">
+      <g stroke="#fff" stroke-opacity=".4" stroke-width="1" fill="currentColor">
+        <ellipse cx="0" cy="-11" rx="9" ry="12.500"/>
+        <ellipse cx="0" cy="-11" rx="9" ry="12.500" transform="rotate(72)"/>
+        <ellipse cx="0" cy="-11" rx="9" ry="12.500" transform="rotate(144)"/>
+        <ellipse cx="0" cy="-11" rx="9" ry="12.500" transform="rotate(216)"/>
+        <ellipse cx="0" cy="-11" rx="9" ry="12.500" transform="rotate(288)"/>
+      </g>
+      <g fill="#fff" opacity=".28">
+        <ellipse cx="0" cy="-15" rx="3" ry="6"/>
+        <ellipse cx="0" cy="-15" rx="3" ry="6" transform="rotate(72)"/>
+        <ellipse cx="0" cy="-15" rx="3" ry="6" transform="rotate(144)"/>
+        <ellipse cx="0" cy="-15" rx="3" ry="6" transform="rotate(216)"/>
+        <ellipse cx="0" cy="-15" rx="3" ry="6" transform="rotate(288)"/>
+      </g>
+      <circle r="5.500" fill="#FFE9A8"/>
+      <circle r="2.200" fill="#E2B24C"/>
+    </g>
+
+    <!-- hoja apuntando hacia +x -->
+    <path id="hoja" d="M0 0C8-11 23-13 36-8 28 5 12 9 0 0Z"/>
+
+    <!-- ramo completo -->
+    <symbol id="ramo" viewBox="0 0 160 380">
+      <g fill="none" stroke="#3E8752" stroke-width="3.200" stroke-linecap="round">
+        <path d="M80 372C80 300 80 160 80 80"/>
+        <path d="M80 372C77 300 52 210 42 116"/>
+        <path d="M80 372C83 300 108 200 120 110"/>
+        <path d="M80 372C76 322 62 250 54 174"/>
+        <path d="M80 372C84 322 98 250 106 170"/>
+        <path d="M80 372C70 330 36 280 22 196"/>
+        <path d="M80 372C90 330 124 280 138 190"/>
+      </g>
+
+      <!-- hojas -->
+      <use href="#hoja" transform="translate(79 292) rotate(-148) scale(1.5)" style="color:#3E8752" fill="currentColor"/>
+      <use href="#hoja" transform="translate(81 288) rotate(-32) scale(1.5)" style="color:#4E9A5E" fill="currentColor"/>
+      <use href="#hoja" transform="translate(70 238) rotate(-160) scale(1.15)" style="color:#4E9A5E" fill="currentColor"/>
+      <use href="#hoja" transform="translate(91 234) rotate(-22) scale(1.15)" style="color:#3E8752" fill="currentColor"/>
+      <use href="#hoja" transform="translate(58 196) rotate(-128) scale(1)" style="color:#3E8752" fill="currentColor"/>
+      <use href="#hoja" transform="translate(103 190) rotate(-52) scale(1)" style="color:#4E9A5E" fill="currentColor"/>
+      <use href="#hoja" transform="translate(48 150) rotate(-150) scale(.9)" style="color:#4E9A5E" fill="currentColor"/>
+      <use href="#hoja" transform="translate(112 146) rotate(-30) scale(.9)" style="color:#3E8752" fill="currentColor"/>
+
+      <!-- flores -->
+      <use href="#flor" transform="translate(22 180) scale(.62)" style="color:#B994EA"/>
+      <use href="#flor" transform="translate(138 174) scale(.62)" style="color:#B994EA"/>
+      <use href="#flor" transform="translate(56 150) scale(.86)" style="color:#9C6FD8"/>
+      <use href="#flor" transform="translate(104 148) scale(.86)" style="color:#8A5CC8"/>
+      <use href="#flor" transform="translate(42 112) scale(.96)" style="color:#A57DE0"/>
+      <use href="#flor" transform="translate(120 106) scale(.96)" style="color:#8F62CC"/>
+      <use href="#flor" transform="translate(80 120) scale(.8)" style="color:#C3A2F0"/>
+      <use href="#flor" transform="translate(80 70) scale(1.1)" style="color:#9568D4"/>
+
+      <!-- lazo -->
+      <path d="M80 330C60 316 50 338 62 348 70 353 78 340 80 330Z" fill="#C9A8F0" stroke="#7B49BE" stroke-width="1.200" stroke-linejoin="round"/>
+      <path d="M80 330C100 316 110 338 98 348 90 353 82 340 80 330Z" fill="#C9A8F0" stroke="#7B49BE" stroke-width="1.200" stroke-linejoin="round"/>
+      <path d="M57 311Q80 320 103 311L105 326Q80 335 55 326Z" fill="#B890EA" stroke="#7B49BE" stroke-width="1.500" stroke-linejoin="round"/>
+      <circle cx="80" cy="326" r="4.500" fill="#9A6BD6" stroke="#7B49BE" stroke-width="1.200"/>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- Ramos de flores (decoración) -->
+<svg class="ramo ramo-izq" viewBox="0 0 160 380" aria-hidden="true" focusable="false"><use href="#ramo"/></svg>
+<svg class="ramo ramo-der" viewBox="0 0 160 380" aria-hidden="true" focusable="false"><use href="#ramo"/></svg>
+
+<main class="pagina">
+
+  <header class="encabezado">
+    <svg class="chispa a" aria-hidden="true"><use href="#i-chispa"/></svg>
+    <svg class="chispa b" aria-hidden="true"><use href="#i-chispa"/></svg>
+    <svg class="chispa c" aria-hidden="true"><use href="#i-chispa"/></svg>
+    <svg class="chispa d" aria-hidden="true"><use href="#i-chispa"/></svg>
+    <h1>Día de la Mujer Boliviana</h1>
+    <span class="fecha">11 de octubre</span>
+  </header>
+
+  <p class="indicacion">Toca cada cartita para leer un pensamiento especial</p>
+
+  <ul class="lista">
+
+    <li class="carta">
+      <button class="boton" type="button" aria-expanded="false" aria-controls="p1">
+        <svg aria-hidden="true"><use href="#i-corazon"/></svg>Pensamiento I
+      </button>
+      <div class="panel" id="p1"><div class="panel-int">
+        <p>Admiro tu capacidad para transformar cualquier problema en una oportunidad y salir siempre adelante con una sonrisa.</p>
+      </div></div>
+    </li>
+
+    <li class="carta">
+      <button class="boton" type="button" aria-expanded="false" aria-controls="p2">
+        <svg aria-hidden="true"><use href="#i-cuadrado"/></svg>Pensamiento II
+      </button>
+      <div class="panel" id="p2"><div class="panel-int">
+        <p>Tu fuerza y determinación me inspiran cada día a ser una mejor versión de mí mismo.</p>
+      </div></div>
+    </li>
+
+    <li class="carta">
+      <button class="boton" type="button" aria-expanded="false" aria-controls="p3">
+        <svg aria-hidden="true"><use href="#i-estrella"/></svg>Pensamiento III
+      </button>
+      <div class="panel" id="p3"><div class="panel-int">
+        <p>Tienes una luz propia que no solo te guía a ti, sino que ilumina el camino de todos los que tenemos la suerte de estar cerca.</p>
+      </div></div>
+    </li>
+
+    <li class="carta">
+      <button class="boton" type="button" aria-expanded="false" aria-controls="p4">
+        <svg aria-hidden="true"><use href="#i-hoja"/></svg>Pensamiento IV
+      </button>
+      <div class="panel" id="p4"><div class="panel-int">
+        <p>Haces que las cosas difíciles parezcan sencillas gracias a la gracia y la calma con la que caminas por la vida.</p>
+      </div></div>
+    </li>
+
+    <li class="carta">
+      <button class="boton" type="button" aria-expanded="false" aria-controls="p5">
+        <svg aria-hidden="true"><use href="#i-sobre"/></svg>Pensamiento V
+      </button>
+      <div class="panel" id="p5"><div class="panel-int">
+        <p>No se trata solo de lo que haces, sino de la paz y la alegría que transmites con el simple hecho de estar presente.</p>
+      </div></div>
+    </li>
+
+    <li class="carta">
+      <button class="boton" type="button" aria-expanded="false" aria-controls="p6">
+        <svg aria-hidden="true"><use href="#i-corazon"/></svg>Pensamiento VI
+      </button>
+      <div class="panel" id="p6"><div class="panel-int">
+        <p>Admiro la forma en que cuidas de los tuyos y el corazón tan inmenso que pones en cada detalle.</p>
+      </div></div>
+    </li>
+
+  </ul>
+
+  <section class="final" aria-label="Mensaje final">
+    <svg class="peq" aria-hidden="true"><use href="#i-chispa"/></svg>
+    <svg aria-hidden="true"><use href="#i-estrella"/></svg>
+    <p>¡Feliz Día de la Mujer Boliviana! Gracias por tu valentía, tu luz y la grandeza de tu corazón.</p>
+    <svg aria-hidden="true"><use href="#i-estrella"/></svg>
+    <svg class="peq" aria-hidden="true"><use href="#i-chispa"/></svg>
+  </section>
+
+</main>
+
+<script>
+  document.querySelectorAll('.carta').forEach(function (carta) {
+    var boton = carta.querySelector('.boton');
+    boton.addEventListener('click', function () {
+      var abierta = carta.classList.toggle('abierta');
+      boton.setAttribute('aria-expanded', abierta ? 'true' : 'false');
+    });
+  });
+</script>
+</body>
+</html>
